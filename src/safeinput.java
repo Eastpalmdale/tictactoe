@@ -4,10 +4,9 @@ public class safeinput {
 
     public static boolean getYNConfirm(Scanner pipe, String prompt) {
         boolean done = false;
-        String userChoiceYesOrNo = "";
+        String userChoiceYesOrNo;
 
         System.out.println(prompt);
-
         userChoiceYesOrNo = pipe.nextLine();
 
         userChoiceYesOrNo = userChoiceYesOrNo.toLowerCase();
@@ -27,7 +26,7 @@ public class safeinput {
 
     public static int getRangedInt(Scanner pipe, String prompt, int low, int high) {
         int userInput = 0;
-        String trash = "";
+        String trash;
         boolean done = false;
         // loop
         do {
@@ -43,7 +42,8 @@ public class safeinput {
                 }
             } else {
                 trash = pipe.nextLine();
-                System.out.println("This is not a correct input. Enter numbers only.");
+
+                System.out.println(trash+" is not a correct input. Enter numbers only.");
             }
 
 
